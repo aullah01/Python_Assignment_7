@@ -1,0 +1,26 @@
+def find_common_count(list1, list2):
+    common_counts = {}
+    
+    # Count occurrences in list1
+    for item in list1:
+        if item in common_counts:
+            common_counts[item] += 1
+        else:
+            common_counts[item] = 1
+    
+    # Count occurrences in list2
+    for item in list2:
+        if item in common_counts:
+            common_counts[item] += 1
+        else:
+            common_counts[item] = 1
+            
+    return common_counts
+
+# Example lists
+l1 = ['a', 'b', 'c', 'd']
+l2 = ['e', 'b', 'g', 'd', 'f', 'h']
+
+# Call the function and print the result
+result = find_common_count(l1, l2)
+print(result)
